@@ -1,0 +1,26 @@
+@mixin button($bgColor: $primaryColor, $textColor: white, $paddingButton: 18px 48px) {
+  padding: $paddingButton;
+  background: $bgColor;
+  color: $textColor;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@mixin fontAndSize ($fontFamily, $fontSize, $fontWeight, $lineHeight) {
+  font-family: $fontFamily, sans-serif;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+// font-family: 'DM Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Roboto Slab', serif;
+// font-family: 'Rubik', sans-serif;
+
+@mixin robotoSlab ($fontSize, $fontWeight, $lineHeight) {
+  font-family: 'Roboto Slab', serif;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
