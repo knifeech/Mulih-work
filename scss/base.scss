@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Poppins:wght@400;500;600&family=Roboto+Slab&family=Rubik:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab&family=Rubik:wght@600&display=swap');
 
 .maketforfigma{
   flex: 0 0 auto;
@@ -252,10 +252,6 @@ body{
   @include button;
 }
 
-.recomendation {
-  padding-bottom: 120px;
-}
-
 .btn-discover {
   @include button (#F8F9FE, $primaryColor, 12px 24px);
   @include fontAndSize ('Poppins', 18px, 500, 26px);
@@ -380,10 +376,83 @@ body{
 }
 
 .peace-of-mind {
+  padding-top: 120px;
+  margin-top: 120px;
+  padding-bottom: 68px;
   background-color: $bgColorOne;
+  h2 {
+    @include fontAndSize ('Rubik', 48px, 600, 56px);
+    letter-spacing: 0.5px;
+    color: $h2Color;
+    margin-top: 16px;
+    width: 435px;
+  }
+}
+
+.grid-container {
+  padding: 20px;
 }
 
 .peace-advante {
   @include button (#F8F9FE, $primaryColor, 12px 24px);
+  @include fontAndSize ('Poppins', 18px, 500, 26px);
+  letter-spacing: 0.5px;
+}
 
+.peace-cards {
+  padding-top: 48px;
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 2;
+  gap: 32px;
+  h3 {
+    @include fontAndSize ('Poppins', 28px, 700, 38px);
+    letter-spacing: 0.5px;
+    color: $h2Color;
+  }
+  p {
+    @include fontAndSize ('Poppins', 16px, 400, 26px);
+    letter-spacing: 0.5px;
+    color: $pTextColor;
+  }
+}
+
+.peace-card1 {
+  width: 336px;
+  grid-column: 1;
+}
+
+.peace-card2 {
+  width: 336px;
+  grid-column: 2;
+}
+
+.peace-card3 {
+  width: 336px;
+  grid-column: 3;
+}
+
+.how-much {
+  margin-top: 120px;
+}
+
+.rating-block {
+  .p-rating {
+    @include fontAndSize ('Poppins', 72px, 400, 80px);
+    letter-spacing: 0.0025em;
+    color: $h2Color;
+  }
+  .p-trusted, .p-reviews {
+    @include fontAndSize ('Poppins', 16px, 400, 24px);
+    letter-spacing: 0.0025em;
+    color: $subtitleColor;
+  }
+  .p-reviews {
+    color: $h2Color;
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
 }
