@@ -437,22 +437,49 @@ body{
 }
 
 .rating-block {
+  position: relative;
+  width: 175px;
+  height: 236px;
+  background-color: $bgColorTwo;
+  .div-tick-square {
+    display: flex;
+    justify-content: center;
+  }
+  .tick-square {
+    position: absolute;
+    margin-top: -13.5px;
+  }
   .p-rating {
     @include fontAndSize ('Poppins', 72px, 400, 80px);
     letter-spacing: 0.0025em;
     color: $h2Color;
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 0;
   }
   .p-trusted, .p-reviews {
     @include fontAndSize ('Poppins', 16px, 400, 24px);
     letter-spacing: 0.0025em;
     color: $subtitleColor;
   }
+  .p-trusted {
+    margin-top: 16px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
   .p-reviews {
     color: $h2Color;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
   }
 }
 
 .stars {
+  margin-top: 10px;
+  margin-bottom: 0;
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
