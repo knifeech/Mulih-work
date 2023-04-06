@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab&family=Rubik:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Nunito+Sans:wght@400;600&family=Poppins:wght@400;500;600;700;800&family=Roboto+Slab&family=Rubik:wght@600&display=swap');
 
 .maketforfigma{
   flex: 0 0 auto;
@@ -274,14 +274,15 @@ body{
 .rec-subtitle-learn-more {
   display: flex;
   gap: 10px;
-  a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: $primaryColor;
-    @include fontAndSize ('Poppins', 18px, 500, 26px);
-    margin-bottom: 28px;
-  }
+}
+
+.btn-learn-more-white {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $primaryColor;
+  @include fontAndSize ('Poppins', 18px, 500, 26px);
+  margin-bottom: 28px;
 }
 
 .rec-h2 {
@@ -434,6 +435,7 @@ body{
 
 .how-much {
   margin-top: 120px;
+  display: flex;
 }
 
 .rating-block {
@@ -441,14 +443,18 @@ body{
   width: 175px;
   height: 236px;
   background-color: $bgColorTwo;
+  margin-left: 96px;
+
   .div-tick-square {
     display: flex;
     justify-content: center;
   }
+
   .tick-square {
     position: absolute;
     margin-top: -13.5px;
   }
+
   .p-rating {
     @include fontAndSize ('Poppins', 72px, 400, 80px);
     letter-spacing: 0.0025em;
@@ -458,17 +464,20 @@ body{
     margin-top: 32px;
     margin-bottom: 0;
   }
+
   .p-trusted, .p-reviews {
     @include fontAndSize ('Poppins', 16px, 400, 24px);
     letter-spacing: 0.0025em;
     color: $subtitleColor;
   }
+
   .p-trusted {
     margin-top: 16px;
     margin-bottom: 0;
     display: flex;
     justify-content: center;
   }
+
   .p-reviews {
     color: $h2Color;
     margin-top: 2px;
@@ -482,4 +491,280 @@ body{
   margin-bottom: 0;
   display: flex;
   justify-content: center;
+}
+
+.how-much-img {
+  position: absolute;
+  z-index: -1;
+  margin-top: -156px;
+}
+
+.count-block {
+  position: absolute;
+  margin-top: 237px;
+  margin-left: 94px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  
+  padding: 0 32px;
+  width: 451px;
+  height: 82px;
+  gap: 32px;
+
+  .count-number {
+    @include fontAndSize ('Poppins', 48px, 600, 58px);
+    color: $h2Color;
+    letter-spacing: 0.0025em;
+    margin: 0;
+  }
+
+  .count-text {
+    @include fontAndSize ('Poppins', 16px, 400, 26px);
+    color: $subtitleColor;
+    letter-spacing: 0.0025em;
+    margin: 0;
+    margin-left: 8px;
+  }
+}
+
+.count-block1, .count-block2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-much-section-second {
+  margin-left: 394px;
+  margin-top: 116px;
+
+  .btn-about-us {
+    @include button (#F8F9FE, $primaryColor, 12px 24px);
+    @include fontAndSize ('Poppins', 18px, 500, 26px);
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+
+  .btn-learn-more {
+    @include button ($primaryColor, $bgColorTwo, 18px 48px);
+    @include fontAndSize ('Poppins', 16px, 500, 24px);
+    letter-spacing: 0.0025em;
+    margin: 0;
+    margin-top: 48px;
+  }
+
+  p {
+    @include fontAndSize ('Poppins', 16px, 400, 26px);
+    letter-spacing: 0.0025em;
+    color: $pTextColor;
+    margin: 0;
+    margin-top: 16px;
+  }
+}
+
+.typical-h2 {
+  @include fontAndSize ('Rubik', 48px, 600, 56px);
+  letter-spacing: 0.5px;
+  color: $h2Color;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.people-say {
+  margin-top: 132px;
+
+  > a {
+    @include button (#F8F9FE, $primaryColor, 12px 24px);
+    @include fontAndSize ('Poppins', 18px, 500, 26px);
+    letter-spacing: 0.5px;
+  } 
+
+  .h2-and-learn-more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .btn-people-learn-more {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    margin-top: 32px;
+  }
+}
+
+.people-cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 48px;
+
+  .people-card {
+    width: 328px;
+    height: 302px;
+
+    background-color: $bgColorTwo;
+    border: 1px solid #DEDCDA;
+
+    padding: 24px;
+  }
+
+  .card-title {
+    @include fontAndSize ('Poppins', 18px, 600, 26px);
+    letter-spacing: 0.0025em;
+    color: $titleColor;
+    margin: 0;
+    margin-top: 24px;
+  }
+
+  .card-subtitle-people {
+    @include fontAndSize ('Poppins', 16px, 400, 24px);
+    letter-spacing: 0.0025em;
+    color: $titleColor;
+  }
+
+  .people {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-top: 24px;
+  }
+
+  .people-name {
+    margin-left: 15px;
+  }
+
+  .card-name {
+    @include fontAndSize ('Nunito Sans', 16px, 600, 26px);
+    letter-spacing: 0.5px;
+    color: $footerColor;
+    margin: 0;
+  }
+
+  .card-job {
+    @include fontAndSize ('Nunito Sans', 12px, 400, 22px);
+    letter-spacing: 0.5px;
+    color: #767676;
+    margin: 0;
+    margin-top: 4px;
+  }
+}
+
+.footer {
+  margin-top: 120px;
+
+  background-color: $bgColorOne;
+}
+
+.footer-flex {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.padding-top-container {
+  padding-top: 75px;
+  padding-bottom: 100px;
+}
+
+.footer-list-1 {
+
+  p {
+    @include fontAndSize ('Poppins', 16px, 400, 26px);
+    letter-spacing: 0.0025em;
+    color: $titleColor;
+    margin: 0;
+    margin-top: 18px;
+    width: 344px;
+  }
+
+  .newsletter {
+
+    p {
+      @include fontAndSize ('DM Sans', 20px, 500, 28px);
+      color: $footerColor;
+      margin: 0;
+      margin-top: 24px;
+    }
+  }
+}
+
+.input-email-block {
+  display: flex;
+  align-items: center;
+
+  margin-top: 16px;
+
+  a {
+    @include button ($primaryColor, $bgColorTwo, 8px 24px);
+    @include fontAndSize ('Poppins', 16px, 500, 26px);
+    letter-spacing: 0.5px;
+  }
+}
+
+.input-email {
+  padding: 8px 0 8px 16px;
+
+  width: 247px;
+  height: 26px;
+
+  border: none;
+  outline: none;
+
+  @include fontAndSize ('DM Sans', 16px, 500, 26px);
+  letter-spacing: 0.5px;
+  color: $footerColor;
+
+  &::placeholder {
+    @include fontAndSize ('Poppins', 16px, 400, 26px);
+    letter-spacing: 0.5px;
+    color: #D7D7D7; 
+  }
+}
+
+.footer-list {
+  margin-top: 0;
+
+  li {
+    list-style-type: none;
+    margin-bottom: 16px;
+    @include fontAndSize ('DM Sans', 16px, 400, 24px);
+
+    a {
+      text-decoration: none;
+      color: $listColor;
+    }
+  }
+}
+
+.footer-span {
+  @include fontAndSize ('DM Sans', 20px, 500, 28px);
+  color: $footerColor;
+}
+
+.footer-list-4 {
+  a {
+    text-decoration: none;
+  }
+
+  > p {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.social {
+  margin: 0;
+  margin-top: 16px;
+
+  img {
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
+  }
 }
